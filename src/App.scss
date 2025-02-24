@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:where(.css-dev-only-do-not-override-rgdiis).ant-layout-header {
+    background: none;
+}
+
+.ant-menu-item {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.ant-menu-item:hover {
+   color: #f16253 !important;
+}
+
+.ant-dropdown-menu-title-content {
+    width: 150px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.ant-menu-item-active {
+    background-color: #fff2f1 !important;  
+}
+
+.ant-select-item-option-selected {
+    background-color: #fff2f1 !important;
+    color: #f16253 !important;
+}
+
+.ant-dropdown-menu-item:hover {
+    background-color: #fff2f1 !important;
+    color: #f16253 !important;
+}
+
+.custom-header-default {
+    background-color: #fff2f1 !important;
+    color: black !important;
+}
+
+.custom-header-red {
+    background-color: #f16253 !important;
+}
+
+.activity-select > .ant-select-item-option {
+   font-weight: 500 !important;
+}
+
+.ant-select-selection-item {
+    font-weight: 500 !important;
+}
+
+.bom-details {
+    .ant-select-selection-item {
+        font-weight: 400 !important;
+    }
+    :where(.css-dev-only-do-not-override-rgdiis).ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+        text-align: left !important;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #fc230b,#4444fb, rgb(3, 246, 60));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+.wrapper-component svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  
+  }
+
+.bom-modal {
+    width: 95vw !important;  
+    height: 650px !important;  
+    max-width: none !important; 
+}
+
+:where(.css-dev-only-do-not-override-rgdiis).bom-modal {
+    top: 24px !important;
+}
+
+.bom-modal {
+    th {
+        background-color: #f16253 !important;
+        color: #fff2f1 !important;
+   }
+   .anticon-filter {
+    color: white;
+   }
+}
+
+th {
+    background-color: #f16253 !important;
+    color: #fff2f1 !important;
+}
+.anticon-filter {
+color: white;
+}
+
+:where(.css-dev-only-do-not-override-rgdiis).ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
+    stroke: #f16253;   
+}
+
+.checklist {
+    :where(.css-dev-only-do-not-override-rgdiis).ant-card .ant-card-body {
+        padding: 16px !important;
+    }
+}
+
+
+.bom-table-row {
+    height: 65px; 
+}
