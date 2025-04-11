@@ -1,10 +1,10 @@
+import { useState } from "react";
 import Header from "./header";
 import LayoutComponent from "./layoutcomponent";
 
 const Index = (props: any) => {
-    const { data, loader } = props;
-    const { constructionList, partList, progressList, currentCount, svgMap, projectList } = data,
-    { construction } = constructionList;
+    const { data, loader, active } = props;
+    const { svgMap, projectList } = data;
     const project_id = localStorage.getItem("project_id");
     const project_name = projectList.find((item: any) => item.id === parseInt(project_id ?? "0"));
     
@@ -12,11 +12,9 @@ const Index = (props: any) => {
     return (
         <div>
             <Header 
-                construction={construction} 
-                progressList={progressList} 
-                partList={partList}
+                projectList={projectList} 
                 loader={loader}
-                currentCount={currentCount}
+                title={active}
             />
             <LayoutComponent 
                 loader={loader}

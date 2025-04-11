@@ -118,7 +118,7 @@ const ProjectList = (props: propsType) => {
       overlayClassName="custom-popover"
       placement="bottom"
     >
-      <div className='px-2 py-1 flex justify-between items-center w-[250px] rounded-lg border border-gray-300 cursor-pointer'>
+      <div className='px-2 py-1 flex justify-between items-center w-[250px] rounded-lg border border-border cursor-pointer'>
         <div
           style={{
             maxWidth: "210px",

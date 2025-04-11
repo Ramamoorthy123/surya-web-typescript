@@ -30,12 +30,12 @@ const LayoutComponent = (props: any) => {
   return (
     <div 
       className="py-4 relative flex cursor-grab justify-center items-center" 
-      style={{ width: '100%', height: 'calc(100vh - 215px)', overflow: 'hidden' }} 
+      style={{ width: '100%', height: 'calc(100vh - 180px)', overflow: 'hidden' }} 
     >
     {loader ? <Spin /> :
       <TransformWrapper
         centerZoomedOut
-        initialScale={0.5} 
+        initialScale={1} 
         minScale={0.5}
         centerOnInit={true}
         limitToBounds={true} 

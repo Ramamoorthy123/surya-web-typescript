@@ -1,14 +1,14 @@
-import { Button, Popover } from 'antd';
+import { Button, Popover, Skeleton } from 'antd';
 import ConstructionProgress from './constructionprogress'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
 const Header = (props: any) => {
-    const { construction, progressList, partList, loader, currentCount } = props;
+    const { loader, title } = props;
     const [open, setOpen] = useState(false);
     const [active, setActive] = useState<string>('Mechanical Progress');
-    const navigate = useNavigate()
+    const navigate = useNavigate();
   
     const handleOpenChange = (newOpen: boolean) => {
       setOpen(newOpen);
@@ -32,14 +32,18 @@ const Header = (props: any) => {
     }
     
     return (
-        <div className='flex justify-between items-center flex-wrap gap-4' >
-            <ConstructionProgress  
+        <div className='flex justify-between items-center mb-4 flex-wrap gap-4' >
+            <div>
+                {loader ? <Skeleton.Button style={{ width: '280px' }} active={false} size={'default'} shape={'default'} block={false} /> :
+                <div className='text-xl font-semibold'>Construction - {title}</div>}
+            </div>
+            {/* <ConstructionProgress  
                 construction={construction} 
                 progressList={progressList}
                 partList={partList}
                 loader={loader}
                 currentCount={currentCount}
-            />
+            /> */}
             <div className='flex gap-8'>
                 <Button type='primary' className='font-[600]'>Select Blocks</Button>
                 <Popover

@@ -23,15 +23,15 @@ const CardComponent = (props: any) => {
     return (
         <Card
             hoverable
-            style={{ width: 300 }}
+            style={{ width: 330 }}
             cover={
                 <div style={{ position: 'relative' }}>
-                    {loading && <Skeleton.Image active style={{ width: 300, height: 150 }} />} 
+                    {loading && <Skeleton.Image active style={{ width: 330, height: 150 }} />} 
                     <img
                         alt="example"
                         src={`${data?.image}`}
                         loading="lazy"
-                        style={{ display: loading ? 'none' : 'block' }} 
+                        style={{ display: loading ? 'none' : 'block' , objectFit: "cover"}} 
                         className="rounded-t-md"
                     />
                 </div>

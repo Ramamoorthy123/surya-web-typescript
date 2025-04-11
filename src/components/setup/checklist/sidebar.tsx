@@ -29,7 +29,7 @@ const SidebarComponent = (props: SidebarComponentProps) => {
 
     return (
         <div className="w-[100%]">
-            <div className="py-2 pb-4 px-4 flex gap-2 items-center text-lg font-semibold cursor-pointer">
+            <div className="py-2 pb-4 px-4 flex gap-2 items-center text-xl font-semibold cursor-pointer">
                 <div className="mt-1" onClick={() => navigate('/setup')}><ArrowLeftOutlined  /></div>
                 <div>{startCase(title)}</div>
             </div>

@@ -13,7 +13,8 @@ const Dashboard = () => {
   const [, setTrackers] = useAtom(fetchTrackers);
   const [, setMap]= useAtom(fetchMapRender)
   const [loader, setLoader] = useState<boolean>(false)
-  const [visible, setVisible] = useState<boolean>(true)
+  const [visible, setVisible] = useState<boolean>(true);
+  const [currentSelection, setCurrentSelection] = useState<string>("")
 
   const initialCall = async () => {
       setLoader(true)
@@ -46,19 +47,21 @@ const Dashboard = () => {
       // eslint-disable-next-line
   }, [])
 
+  console.log(currentSelection, 'calling')
   return (
    <div className="w-[100%] relative flex gap-2">
-      <div className="w-[70%] p-4" style={{ width: visible ? "70%": "100%", borderRight: "1px solid #e5e7eb", height:"calc(100vh - 115px)"}}>
-        <SvgComponent  data={data} loader={loader} />
+      <div className="w-[65%] p-4" style={{ width: visible ? "65%": "100%", borderRight: "1px solid #cccbcb", height:"calc(100vh - 115px)"}}>
+        <SvgComponent active={currentSelection}  data={data} loader={loader} />
       </div>
       {visible ?
-      <div className="w-[30%] px-2" style={{ height:"calc(100vh - 115px)", overflow: 'auto' }}>
+      <div className="w-[35%] px-2" style={{ height:"calc(100vh - 115px)", overflow: 'auto' }}>
         <SidebarComponent
             loader={loader} 
             data={data}
+            setCurrentSelection={setCurrentSelection}
         /> 
       </div> : ''}
-      <div onClick={() => setVisible(!visible)} style={{ right: visible ? '27%' : 0}} className="border bg-white z-10 absolute top-2 w-[32px] border-border cursor-pointer px-2 py-1 rounded-sm">
+      <div onClick={() => setVisible(!visible)} style={{ right: visible ? '32%' : 0}} className="border bg-white z-10 absolute top-2 w-[32px] border-border cursor-pointer px-2 py-1 rounded-sm">
           {visible ? <RightOutlined /> : <LeftOutlined />}
       </div>
    </div>

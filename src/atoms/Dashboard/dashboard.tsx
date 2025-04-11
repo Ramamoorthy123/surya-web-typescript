@@ -10,7 +10,8 @@ interface DashboardView {
  trackerList: any[],
  currentCount: any,
  svgMap: string,
- bomList: any[]
+ bomList: any[],
+ counts: any
 }
 
 const dashboardAtoms = atom<DashboardView>({
@@ -21,7 +22,8 @@ const dashboardAtoms = atom<DashboardView>({
     trackerList: [],
     currentCount: {},
     svgMap: '',
-    bomList: []
+    bomList: [],
+    counts: {}
   });
 
 export const getProject = atom(null, async (_, set, _args) => {

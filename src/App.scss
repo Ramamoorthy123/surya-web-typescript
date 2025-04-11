@@ -6,6 +6,13 @@
     background: none;
 }
 
+.checklist {
+    :where(.css-dev-only-do-not-override-jerbh5).ant-input {
+        padding: 8px 12px;
+        font-size: 16px;
+    }    
+}
+
 .ant-menu-item {
     font-weight: 600;
     font-size: 16px;
@@ -81,7 +88,6 @@
 
 .bom-modal {
     width: 95vw !important;  
-    height: 650px !important;  
     max-width: none !important; 
 }
 
@@ -121,3 +127,9 @@ color: white;
 .bom-table-row {
     height: 65px; 
 }
+
+.ant-card {
+    border: 1px solid #cccbcb !important;
+    border-radius: 10px !important; 
+  }
+  

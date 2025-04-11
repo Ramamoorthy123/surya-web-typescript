@@ -5,7 +5,7 @@ import TrackerType from "./trackertype";
 import BomModalComponent from "../shared/BomModalComponent";
 
 const SidebarComponent = (props: any) => {
-    const { data, loader } = props;
+    const { data, loader, setCurrentSelection } = props;
     const { constructionList, progressList, trackerList } = data;
     const { construction } = constructionList;
     const [open, setIsOpen] = useState<boolean>(false);
@@ -18,6 +18,7 @@ const SidebarComponent = (props: any) => {
               loader={loader} 
               construction={construction}
               progressList={progressList}
+              setCurrentSelection={setCurrentSelection}
           />
           <TrackerType trackerList={trackerList} loader={loader} />
           <BomModalComponent 

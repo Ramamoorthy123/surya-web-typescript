@@ -97,14 +97,15 @@ const BomModalComponent= (props: any) => {
   return (
     <div>
         <Modal 
-            style={{ width: '90vw', height: '650px'}}
+            style={{ width: '90vw'}}
             title="Bill of Materials - Project" 
             open={open} 
             footer={false} 
             onCancel={handleCancel}
+            centered
             className='bom-modal'
         >
-            <div className='flex px-8 gap-8 justify-end'>
+            <div className='flex px-8 mb-4 gap-8 justify-end'>
                 <Button>
                     <div className='flex gap-2'>
                         <div><DownloadOutlined /></div>
@@ -133,7 +134,6 @@ const BomModalComponent= (props: any) => {
                     dataSource={data} 
                     pagination={false}
                     scroll={{ y: 100 * 5 }}
-                    style={{ marginTop: '16px'}}
                     loading={loader}
                 />
         </Modal>

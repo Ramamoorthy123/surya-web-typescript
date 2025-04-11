@@ -2,7 +2,7 @@ import { useAtom } from "jotai";
 import SidebarComponent from "./sidebar";
 import setupAtoms, { getcpChecklist } from "../../../atoms/setup/setup";
 import { useEffect, useState } from "react";
-import Content from "./content";
+import ChecklistForm from "./FormComponent";
 
 const Index = () => {
     const  [data] = useAtom(setupAtoms);
@@ -35,7 +35,7 @@ const Index = () => {
                 />
             </div>
             <div style={{ borderLeft: "1px solid #e5e7eb" }} className="w-[75%] px-8">
-                <Content />
+                <ChecklistForm />
             </div>
         </div>
     )
